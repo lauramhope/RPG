@@ -3,14 +3,14 @@ export default class Character {
   constructor(name, characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money) {
     this.name = name;
     this.characterClass = characterClass;
-    // this.strength = strength;
-    // this.intelligence = intelligence;
-    // this.dexterity = dexterity;
-    // this.maxHealth = maxHealth;
-    // this.currentHealth = currentHealth;
-    // this.level = level;
-    // this.experience = experience;
-    // this.money = money;
+    this.strength = strength;
+    this.intelligence = intelligence;
+    this.dexterity = dexterity;
+    this.maxHealth = maxHealth;
+    this.currentHealth = currentHealth;
+    this.level = level;
+    this.experience = experience;
+    this.money = money;
     // this.inventory = new Inventory(10);
   }
 }

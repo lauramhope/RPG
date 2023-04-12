@@ -6,24 +6,29 @@ describe ('Character', () => {
   let character;
 
   beforeEach(() => {
-    character = new Character();
+    character = new Character("Zuko", "Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
   })
 
   test ('should create a character object with assigned properties', () => {
-    const newCharacter = ("Zuko", "Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
-    expect(newCharacter.name).toEqual("Zuko");
-    expect(newCharacter.characterClass).toEqual("Warrior");
-    expect(newCharacter.strength).toEqual(10);
-    expect(newCharacter.intelligence).toEqual(6);
-    expect(newCharacter.dexterity).toEqual(3);
-    expect(newCharacter.maxHealth).toEqual(150);
-    expect(newCharacter.currentHealth).toEqual(150);
-    expect(newCharacter.level).toEqual(1);
-    expect(newCharacter.experience).toEqual(0);
-    expect(newCharacter.money).toEqual(0);
+    expect(character.name).toEqual("Zuko");
+    expect(character.characterClass).toEqual("Warrior");
+    expect(character.strength).toEqual(10);
+    expect(character.intelligence).toEqual(6);
+    expect(character.dexterity).toEqual(3);
+    expect(character.maxHealth).toEqual(150);
+    expect(character.currentHealth).toEqual(150);
+    expect(character.level).toEqual(1);
+    expect(character.experience).toEqual(0);
+    expect(character.money).toEqual(0);
   });
 
-  // test ('')
+  test ('', () => {
+    
+  })
+
+  test ('', () => {
+    
+  })
 
 })
 
