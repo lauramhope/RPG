@@ -1,4 +1,4 @@
-import { Character, Game } from '../src/js/character.js';
+import { Character, Monster } from '../src/js/character.js';
 
 describe ('Character', () => {
   let character;
@@ -31,21 +31,57 @@ describe ('Character', () => {
   });
 });
   
-describe ('Game', () => {
-  let game;
+describe ('Monster', () => {
+  let monster;
 
   beforeEach(() => {
-    game = new Game();
-  }); 
+    monster = new Monster("Fire Nation Soldier", 2, 2, 3, 3, 100, 100);
+  })
 
-  test ('should assign id to character', () => {
-    const newCharacter = { name: "Kitara"};
-    game.addCharacter(newCharacter);
-    expect(newCharacter.id).toEqual(1); 
-  }); 
-
-
+  test ('should create a monster object with assigned properties', () => {
+    expect(monster.name).toEqual("Fire Nation Soldier");
+    expect(monster.strength).toEqual(2);
+    expect(monster.defense).toEqual(2);
+    expect(monster.maxHealth).toEqual(3);
+    expect(monster.currentHealth).toEqual(3);
+    expect(monster.experienceReward).toEqual(100);
+    expect(monster.moneyReward).toEqual(100);
+  });
+})
+// this.name = name;
+// this.strength = strength;
+// this.defense = defense;
+// this.maxHealth = maxHealth;
+// this.currentHealth = currentHealth;
+// this.experienceReward = experienceReward;
+// this.moneyReward = moneyReward;
+// }
   
+
+// describe ('Game', () => {
+//   let game;
+
+//   beforeEach(() => {
+//     game = new Game();
+//   });
+  
+  // test ("should assign characterStyle to the player")
+
+
+
+
+
+  // test ('should assign id to character', () => {
+  //   const newCharacter = { name: "Kitara"};
+  //   game.addCharacter(newCharacter);
+  //   expect(newCharacter.id).toEqual(1); 
+  // }); 
+
+  // test ('should add a character to the game object', () => {
+  //   const newCharacter1 = { name: "Iroh", name: "Kitara"}; 
+  //   game.addCharacter(newCharacter1);
+  //   expect(game.characterCreation).toEqual({1: "Iroh", 2: "Jeff"});
+  // });
 
   // test ('should assign characters to new game', () => {
   //   const newCharacter = { name: "Kitara"};
@@ -55,9 +91,8 @@ describe ('Game', () => {
 
   //   expect(game.characterCreation).toContain("Kitara", "Jeff");
   // });
-  
-})
-  
+
+
 
 
 
