@@ -9,15 +9,21 @@ describe ('Character', () => {
     character = new Character();
   })
 
-  test ('should create a character object with assigned name', () => {
-    const newCharacter = { name: "Zuko"};
+  test ('should create a character object with assigned properties', () => {
+    const newCharacter = ("Zuko", "Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
     expect(newCharacter.name).toEqual("Zuko");
+    expect(newCharacter.characterClass).toEqual("Warrior");
+    expect(newCharacter.strength).toEqual(10);
+    expect(newCharacter.intelligence).toEqual(6);
+    expect(newCharacter.dexterity).toEqual(3);
+    expect(newCharacter.maxHealth).toEqual(150);
+    expect(newCharacter.currentHealth).toEqual(150);
+    expect(newCharacter.level).toEqual(1);
+    expect(newCharacter.experience).toEqual(0);
+    expect(newCharacter.money).toEqual(0);
   });
 
-  test ('should assigns a character class to each character', () => {
-    const newCharacterClass = { characterClass: "Warrior" };
-    expect(newCharacterClass.characterClass).toEqual("Warrior");
-  });
+  // test ('')
 
 })
 
