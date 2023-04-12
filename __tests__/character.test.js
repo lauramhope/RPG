@@ -22,13 +22,19 @@ describe ('Character', () => {
     expect(character.money).toEqual(0);
   });
 
-  test ('', () => {
-    
-  })
+  test ('should show character moving up each level', () => {
+    character.levelUp();
+    expect(character.level).toGreaterThan(1);
+    expect(character.dexterity).toGreaterThan(3);
+    expect(character.strength).toGreaterThan(10);
+    expect(character.intelligence).toGreaterThan(6);
+    expect(character.currentHealth).toGreaterThan(150);
+    expect(character.maxHealth).toGreaterThan(150);
+  });
 
-  test ('', () => {
+  // test ('', () => {
     
-  })
+  // })
 
 })
 
