@@ -1,7 +1,6 @@
 
-export default class Character {
-  constructor(name, characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money) {
-    this.name = name;
+export class Character {
+  constructor(characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money) {
     this.characterClass = characterClass;
     this.strength = strength;
     this.intelligence = intelligence;
@@ -22,6 +21,25 @@ export default class Character {
     this.maxHealth += 10;
     this.currentHealth = this.maxHealth;
   }
+
+}
+
+export class Game {
+  constructor() {
+    this.characterCreation = {};
+    this.currentId = 0;
+  }
+
+  assignId() {
+    this.currentId += 1;
+    return this.currentId; 
+  }
+
+  addCharacter(character) {
+    character.id = this.assignId();
+    this.characterCreation[character.id] = character;
+  }
+
 }
 
 
