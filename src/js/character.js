@@ -2,7 +2,7 @@
 export default class Character {
   constructor(name, characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money) {
     this.name = name;
-    // this.characterClass = characterClass;
+    this.characterClass = characterClass;
     // this.strength = strength;
     // this.intelligence = intelligence;
     // this.dexterity = dexterity;
