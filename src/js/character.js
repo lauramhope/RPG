@@ -21,30 +21,49 @@ export class Character {
     this.maxHealth += 10;
     this.currentHealth = this.maxHealth;
   }
-
 }
 
-export class Game {
-  constructor() {
-    this.characterCreation = {};
-    this.currentId = 0;
-  }
-
-  assignId() {
-    this.currentId += 1;
-    return this.currentId; 
-  }
-
-  addCharacter(character) {
-    character.id = this.assignId();
-    this.characterCreation[character.id] = character;
+export class Monster {
+  constructor(name, strength, defense, maxHealth, currentHealth, experienceReward, moneyReward) {
+    this.name = name;
+    this.strength = strength;
+    this.defense = defense;
+    this.maxHealth = maxHealth;
+    this.currentHealth = currentHealth;
+    this.experienceReward = experienceReward;
+    this.moneyReward = moneyReward;
   }
 
 }
+  // decideClass(option) {
+  // this.characterClass = option;
+  // }
+
+// export class Game {
+//   constructor() {
+//     let player = new Character();
+//     defeatMonster = 
+//     findObject = 
+
+
+//   }
 
 
 
 
+
+
+
+
+  // assignId() {
+  //   this.maxId += 1;
+  //   return this.maxId; 
+  // }
+
+  // addCharacter(character) {
+  //   character.id = this.assignId();
+  //   this.characterCreation[character.id] = character;
+  // }
 
 // export default class Triangle {
 //   constructor(side1, side2, side3) {

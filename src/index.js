@@ -1,9 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Triangle from './js/character.js';
-import Rectangle from './js/rectangle.js';
-
+import { Character, Game } from '../src/js/character.js';
 
 // User interface logic
 

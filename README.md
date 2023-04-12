@@ -1,16 +1,16 @@
-# _{Application Name}_
+# _RPG_
 
 #### _{Brief description of application}_
 
-#### By **Laura Hope**_
+#### By **Laura Hope, Joe Wilfong, Ross Davila**
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
 * _JavaScript_
-* _Webpack_
-* _Node.js_
+* _Webpack v 4.46.0_
+* _Node.js v 16.13.1_
 
 ## Description
 
@@ -35,13 +35,12 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 ## Known Bugs
 
 * _Any known issues_
-* _should go here_
 
 ## License
 
 MIT License
 
-Copyright (c) [2023] [Laura Hope]
+Copyright (c) [2023] [Laura Hope, Joe Wilfong, Ross Davila]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -61,4 +60,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-_If you run into any issues or have questions, ideas or concerns, please reach out to me via email: lauramhope.dpt@gmail.com.  Contributions to the code are highly encouraged._
+_If you run into any issues or have questions, ideas or concerns, please reach out via email: lauramhope.dpt@gmail.com.  Contributions to the code are highly encouraged._
