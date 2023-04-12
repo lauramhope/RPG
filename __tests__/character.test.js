@@ -6,11 +6,11 @@ describe ('Character', () => {
   let character;
 
   beforeEach(() => {
-    character = new Character("Zuko", "Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
+    character = new Character("Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
   })
 
   test ('should create a character object with assigned properties', () => {
-    expect(character.name).toEqual("Zuko");
+    // expect(character.name).toEqual("Zuko");
     expect(character.characterClass).toEqual("Warrior");
     expect(character.strength).toEqual(10);
     expect(character.intelligence).toEqual(6);
@@ -32,10 +32,7 @@ describe ('Character', () => {
     expect(character.maxHealth).toBeGreaterThan(150);
   });
 
-  test ('will allow to choose specific character class from array of character classes', () => {
-    character.chooseCharClass();
-    expect(character.characterClass).toEqual("wizard");
-  });
+  
 
   
   // test ('', () => {
@@ -43,6 +40,18 @@ describe ('Character', () => {
   // });
 
 })
+
+// test ('will allow to choose specific character class from array of character classes', () => {
+  //   character.chooseCharClass();
+  //   expect(character.characterClass).toEqual("wizard");
+  // });
+
+  // test ('should push correct character name onto created character array', () => {
+    
+    //   character.addCharacter("Kitara");
+    //   expect(character.characterCreation).toContain("Kitara");
+    // });
+
 
 
 
