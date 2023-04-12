@@ -13,6 +13,15 @@ export default class Character {
     this.money = money;
     // this.inventory = new Inventory(10);
   }
+
+  levelUp() {
+    this.level++;
+    this.strength += 2;
+    this.intelligence += 2;
+    this.dexterity += 2;
+    this.maxHealth += 10;
+    this.currentHealth = this.maxHealth;
+  }
 }
 
 

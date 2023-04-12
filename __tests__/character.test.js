@@ -29,7 +29,7 @@ describe ('Character', () => {
     expect(character.strength).toBeGreaterThan(10);
     expect(character.intelligence).toBeGreaterThan(6);
     expect(character.currentHealth).toBeGreaterThan(150);
-    expect(character.maxHealth).toBeGreaterThan(140);
+    expect(character.maxHealth).toBeGreaterThan(150);
   });
 
   // test ('', () => {
