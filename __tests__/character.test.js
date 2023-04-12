@@ -2,7 +2,6 @@ import Character from '../src/js/character.js';
 
 // name, characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money
 
-
 describe ('Character', () => {
   let character;
 
@@ -12,9 +11,14 @@ describe ('Character', () => {
 
   test ('should create a character object with assigned name', () => {
     const newCharacter = { name: "Zuko"};
-    // character.createCharacter(newCharacter);
-    expect(newCharacter.name).toEqual("Jeff");
+    expect(newCharacter.name).toEqual("Zuko");
   });
+
+  test ('should assigns a character class to each character', () => {
+    const newCharacterClass = { characterClass: "Warrior" };
+    expect(newCharacterClass.characterClass).toEqual("Warrior");
+  });
+
 })
 
 
