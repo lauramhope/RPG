@@ -1,6 +1,4 @@
-import Character from '../src/js/character.js';
-
-// name, characterClass, strength, intelligence, dexterity, maxHealth, currentHealth, level, experience, money
+import { Character, Game } from '../src/js/character.js';
 
 describe ('Character', () => {
   let character;
@@ -31,15 +29,37 @@ describe ('Character', () => {
     expect(character.currentHealth).toBeGreaterThan(150);
     expect(character.maxHealth).toBeGreaterThan(150);
   });
+});
+  
+describe ('Game', () => {
+  let game;
+
+  beforeEach(() => {
+    game = new Game();
+  }); 
+
+  test ('should assign id to character', () => {
+    const newCharacter = { name: "Kitara"};
+    game.addCharacter(newCharacter);
+    expect(newCharacter.id).toEqual(1); 
+  }); 
+
 
   
 
-  
-  // test ('', () => {
-    
+  // test ('should assign characters to new game', () => {
+  //   const newCharacter = { name: "Kitara"};
+  //   game.addCharacter(newCharacter);
+  //   expect(game.characterCreation).toEqual({1: newCharacter});
   // });
 
+  //   expect(game.characterCreation).toContain("Kitara", "Jeff");
+  // });
+  
 })
+  
+
+
 
 // test ('will allow to choose specific character class from array of character classes', () => {
   //   character.chooseCharClass();
