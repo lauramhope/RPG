@@ -32,9 +32,15 @@ describe ('Character', () => {
     expect(character.maxHealth).toBeGreaterThan(150);
   });
 
+  test ('will allow to choose specific character class', () => {
+    character.chooseCharClass();
+    expect(character.characterClass).toEqual("wizard");
+  });
+
+  
   // test ('', () => {
     
-  // })
+  // });
 
 })
 
