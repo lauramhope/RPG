@@ -13,7 +13,7 @@ describe ('Character', () => {
   test ('should create a character object with assigned name', () => {
     const newCharacter = { name: "Zuko"};
     // character.createCharacter(newCharacter);
-    expect(newCharacter.name).toEqual("Zuko");
+    expect(newCharacter.name).toEqual("Jeff");
   });
 })
 
