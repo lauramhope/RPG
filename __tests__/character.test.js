@@ -56,15 +56,15 @@ describe ('Battle', () => {
   beforeEach(() => {
   const character = {
       strength: 10,
-      defense: 6,
+      defense: 2,
       currentHealth: 150,
       experience: 0,
       money: 0
     };
     const monster = {
-      strength: 2,
+      strength: 3,
       defense: 2,
-      currentHealth: 3,
+      currentHealth: 8,
       experienceReward: 100,
       moneyReward: 100
     };
@@ -72,10 +72,17 @@ describe ('Battle', () => {
   });
   
   test('should decrease monster health by monster strength minus character defense', () => {
-    const expectedDamage= battle.character.strength - battle.monster.defense;
-    const expectedHealth = battle.monster.currentHealth - expectedDamage;
+    const expectedHeroDamage= battle.character.strength - battle.monster.defense;
+    const expectedMonsterHealth = battle.monster.currentHealth - expectedHeroDamage;
+    const newExperience = battle.character.experience + battle.monster.experienceReward;
+    const newMoney = battle.character.money + battle.monster.moneyReward;
+    const expectedMonsterDamage = battle.monster.strength - battle.character.defense;
+    const expectedHeroHealth = battle.character.currentHealth - expectedMonsterDamage;
     battle.battleAttack();
-    expect(battle.monster.currentHealth).toBe(expectedHealth);
+    expect(expectedMonsterHealth).toBe(battle.monster.currentHealth);
+    expect(battle.character.experience).toBe(newExperience);
+    expect(battle.character.money).toBe(newMoney);
+    expect(expectedHeroHealth).toBeLessThan(battle.character.currentHealth);
   });
 });
 
