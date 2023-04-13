@@ -1,11 +1,11 @@
-import { Character, Monster } from '../src/js/character.js';
+import { Character, Monster, Battle } from '../src/js/character.js';
 
 describe ('Character', () => {
   let character;
 
   beforeEach(() => {
     character = new Character("Warrior", 10, 6, 3, 150, 150, 1, 0, 0);
-  })
+  });
 
   test ('should create a character object with assigned properties', () => {
     // expect(character.name).toEqual("Zuko");
@@ -36,7 +36,7 @@ describe ('Monster', () => {
 
   beforeEach(() => {
     monster = new Monster("Fire Nation Soldier", 2, 2, 3, 3, 100, 100);
-  })
+  });
 
   test ('should create a monster object with assigned properties', () => {
     expect(monster.name).toEqual("Fire Nation Soldier");
@@ -48,6 +48,57 @@ describe ('Monster', () => {
     expect(monster.moneyReward).toEqual(100);
   });
 })
+
+
+describe ('Battle', () => {
+  let battle;
+
+  beforeEach(() => {
+  const character = {
+      strength: 10,
+      defense: 6,
+      currentHealth: 150,
+      experience: 0,
+      money: 0
+    };
+    const monster = {
+      strength: 2,
+      defense: 2,
+      currentHealth: 3,
+      experienceReward: 100,
+      moneyReward: 100
+    };
+  battle = new Battle(character, monster);
+  });
+  
+  test('should decrease monster health by monster strength minus character defense', () => {
+    const expectedDamage= battle.character.strength - battle.monster.defense;
+    const expectedHealth = battle.monster.currentHealth - expectedDamage;
+    battle.battleAttack();
+    expect(battle.monster.currentHealth).toBe(expectedHealth);
+  });
+});
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // this.name = name;
 // this.strength = strength;
 // this.defense = defense;
@@ -91,52 +142,3 @@ describe ('Monster', () => {
 
   //   expect(game.characterCreation).toContain("Kitara", "Jeff");
   // });
-
-
-
-
-
-// test ('will allow to choose specific character class from array of character classes', () => {
-  //   character.chooseCharClass();
-  //   expect(character.characterClass).toEqual("wizard");
-  // });
-
-  // test ('should push correct character name onto created character array', () => {
-    
-    //   character.addCharacter("Kitara");
-    //   expect(character.characterCreation).toContain("Kitara");
-    // });
-
-
-
-
-
-
-
-
-
-// describe('Triangle', () => {
-
-//   test('should correctly create a triangle object with three lengths', () => {
-//     const triangle = new Triangle(2,4,5);
-//     expect(triangle.side1).toEqual(2);
-//     expect(triangle.side2).toEqual(4);
-//     expect(triangle.side3).toEqual(5);
-//   });
-//   test('should correctly determine whether three lengths are not a triangle', () => {
-//     const notTriangle = new Triangle(3,9,22);
-//     expect(notTriangle.checkType()).toEqual("not a triangle");
-//   });
-//   test('should correctly determine whether three lengths make a scalene triangle', () => {
-//     const scalTriangle = new Triangle(4,5,7)
-//     expect(scalTriangle.checkType()).toEqual("scalene triangle");
-//   });
-//   test('should correctly determine whether three lengths make an isosceles triangle', () => {
-//     const isoscTriangle = new Triangle(5,5,7)
-//     expect(isoscTriangle.checkType()).toEqual("isosceles triangle");
-//   });
-//   test('should correctly determine whether three lengths make an equilateral triangle', () => {
-//     const equiTriangle = new Triangle(5,5,5)
-//     expect(equiTriangle.checkType()).toEqual("equilateral triangle");
-//   });
-// });
