@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shape Tracker</title>
+  <title>RPG</title>
 </head>
 <body>
-  <h3>Enter three lengths to determine if they can make a triangle.</h3>
-  <form id="triangle-checker-form">
-    <label for="length1">Enter a number:</label>
-    <input id="length1" type="number">
-    <label for="length2">Enter a number:</label>
-    <input id="length2" type="number">
-    <label for="length3">Enter a number:</label>
-    <input id="length3" type="number">
-    <button type="submit">Submit</button>
+  <h1>Blades of Destiny</h1>
+  <form id="game-setup">
+    <label for="name">Add Player: </label>
+    <input id="name" type="text">
+    <button type="submit">Begin</button>
   </form>
-  <ul id="response"></ul>
-  <h3>Enter the lengths of a rectangle's two sides to determine its area.</h3>
-  <form id="rectangle-area-form">
-    <label for="rect-length1">Enter a number:</label>
-    <input id="rect-length1" type="number">
-    <label for="rect-length2">Enter a number:</label>
-    <input id="rect-length2" type="number">
-    <button type="submit">Submit</button>
+
+  <div id="player-stats" class="hidden">
+    <p> Class: <span id="character-class"></span></p>
+    <p> Strength: <span id="character-strength"></span></p>
+    <p> Intelligence: <span id="character-intelligence"></span></p>
+    <p> Dexterity: <span id="character-dexterity"></span></p>
+    <p> Max Health: <span id="character-maxHealth"></span></p>
+    <p> Current Health: <span id="character-currentHealth"></span></p>
+    <p> Level: <span id="character-level"></span></p>
+    <p> Experience: <span id="character-experience"></span></p>
+    <p> Money: <span id="character-money"></span></p>
+  </div>
+
+
+  <form id = "play-game">
+    <div id="player">
+      <h3></h3>
+      <button type="submit" id="roll" class="btn">Roll Dice</button>
+    </div>
   </form>
-  <ul id="response2"></ul>
+
+  <div id="level-up" class="hidden">
+    <p>Current Player: <span id="player-name"></span></p>
+    <p>Roll: <span id="roll-amount"></span></p>
+    <p>New Level: <span id="new-level"></span></p>
+    <p>New Strength Total: <span id="new-strength"></span></p>
+    <p>New Intelligene Total: <span id="new-intelligence"></span></p>
+    <p>New Dexterity Total: <span id="new-dexterity"></span></p>
+    <p>New Current Health Total: <span id="new-currentHealth"></span></p>
+    <p><span id="rolled-one"></span></p>
+  </div>
+
+  <form id = "battle">
+    <div id="battle-monster">
+      <h3></h3>
+      <button type="submit" id="roll" class="btn">Battle the monster!</button>
+    </div>
+  </form>
+
+  <div id="battle-results" class="hidden">
+    <p>Current Player: <span id="player-name"></span></p>
+    <p>Player Strength: <span id="battle-strength"></span></p>
+    <p>Player Defense: <span id="battle-defense"></span></p>
+    <p>Player Current Health: <span id="battle-currentHealth"></span></p>
+    <p>Player Experience Reward: <span id="player-name"></span></p>
+    <p>Player Money Reward: <span id="player-name"></span></p>
+    <p><span id="rolled-one"></span></p>
+  </div>
+  <form>
+    <button class="restart-btn">New Game</button>
+  </form>
+
+
 </body>
 </html>
+

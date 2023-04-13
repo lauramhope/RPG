@@ -54,35 +54,17 @@ export class Battle {
     }
   }
 }
-// export class Gameplay {
-//   constructor(stepAmount, map, triggerTreasure, triggerMonster, )
+export class Gameplay {
+  constructor(stepAmount, map) {
+    this.stepAmount = step;
+    this.map = map;
+  }
+//   newArea(){
+//     this.stepAmount += 1;
+
+//   }
 // } 
 
 
-// newArea, finishGame
+// newArea, finishGame, triggerTreasure, triggerMonster, experience > x, increase 1 (increase health strength)
 
-// {strength:10, defense:10, currentHealth:10, experience:0, money:0};
-// {strength:2, defense:2, maxHealth:2, currentHealth:2, experience: 100, money:100}
-
-//   attackCharacter() {
-//     const attackDamage = this.monster.strength - this.character.defense;
-//     this.character.currentHealth -= attackDamage;
-//     if (this.character.currentHealth <= 0) {
-//       return "You have died.";
-//     } else {
-//       return "You have " + this.character.currentHealth + " health remaining.";
-//     }
-//   }
-// }
-
-// attackMonster() {
-//   const attackDamage = this.character.strength - this.monster.defense;
-//   this.monster.currentHealth -= attackDamage;
-//   if (this.monster.currentHealth <= 0) {
-//     this.character.experience += this.monster.experienceReward;
-//     this.character.money += this.monster.moneyReward;
-//     return "You have defeated the monster.";
-//   } else {
-//     return "The monster has " + this.monster.currentHealth + " health remaining.";
-//   }
-// }

@@ -1,9 +1,19 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { Character, Game, Battle } from '../src/js/character.js';
+import { Character, Battle } from '../src/js/character.js';
 
 // User interface logic
+
+// let game = new Game(); 
+
+function displayGameSetup(event) {
+  event.preventDefault(); 
+  const inputtedPlayerName = document.querySelector("input#name").value;
+  let newCharacter = new Character(inputtedPlayerName);
+  
+}
+
 
 
 
@@ -32,7 +42,7 @@ import { Character, Game, Battle } from '../src/js/character.js';
 //   document.querySelector('#response2').append(pTag);
 // }
 
-// window.addEventListener("load", function() {
-//   document.querySelector("#triangle-checker-form").addEventListener("submit", handleTriangleForm);
-//   document.querySelector("#rectangle-area-form").addEventListener("submit", handleRectangleForm);
-// });
+window.addEventListener("load", function() {
+  document.querySelector("#triangle-checker-form").addEventListener("submit", handleTriangleForm);
+  document.querySelector("#rectangle-area-form").addEventListener("submit", handleRectangleForm);
+});

@@ -86,6 +86,19 @@ describe ('Battle', () => {
   });
 });
 
+describe ('Gameplay', () => {
+  let game;
+  beforeEach(() => {
+    const step = 0;
+    const map = ["start", "", "monster", "blank", "treasure", "", "monster", "end"];
+    game = new Gameplay(step, map);
+
+    test('should start a new gameplay with step value of one and assign array positions for gameplay events');
+    expect(game.step).toEqual(0);
+    expect(game.map).toEqual("start", "", "monster", "blank", "treasure", "", "monster", "end");
+  })
+})
+
 
   
 
