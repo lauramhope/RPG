@@ -33,54 +33,55 @@ export class Monster {
     this.experienceReward = experienceReward;
     this.moneyReward = moneyReward;
   }
+}
+
+
+
+
+
+export class Battle {
+  constructor(character, monster) {
+    this.character = character;
+    this.monster = monster;
+  }
+
+  battleAttack() {
+    const attackDamage = this.character.strength - this.monster.defense;
+    this.monster.currentHealth -= attackDamage;
+    if (this.monster.currentHealth <= 0) {
+      this.character.experience += this.monster.experienceReward;
+      this.character.money += this.monster.moneyReward;
+      return "You have defeated the monster.";
+    } else {
+      return "The monster has " + this.monster.currentHealth + " health remaining.";
+    }
+  }
+    
 
 }
-  // decideClass(option) {
-  // this.characterClass = option;
-  // }
 
-// export class Game {
-//   constructor() {
-//     let player = new Character();
-//     defeatMonster = 
-//     findObject = 
+// {strength:10, defense:10, currentHealth:10, experience:0, money:0};
+// {strength:2, defense:2, maxHealth:2, currentHealth:2, experience: 100, money:100}
 
-
-//   }
-
-
-
-
-
-
-
-
-  // assignId() {
-  //   this.maxId += 1;
-  //   return this.maxId; 
-  // }
-
-  // addCharacter(character) {
-  //   character.id = this.assignId();
-  //   this.characterCreation[character.id] = character;
-  // }
-
-// export default class Triangle {
-//   constructor(side1, side2, side3) {
-//     this.side1 = side1;
-//     this.side2 = side2;
-//     this.side3 = side3;
-//   }
-
-//   checkType() {
-//     if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-//       return "not a triangle";
-//     } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-//       return "scalene triangle";
-//     }  else if ((this.side1 === this.side2) && (this.side1 === this.side3)) {
-//       return "equilateral triangle";
+//   attackCharacter() {
+//     const attackDamage = this.monster.strength - this.character.defense;
+//     this.character.currentHealth -= attackDamage;
+//     if (this.character.currentHealth <= 0) {
+//       return "You have died.";
 //     } else {
-//       return "isosceles triangle";
+//       return "You have " + this.character.currentHealth + " health remaining.";
 //     }
-//   }    
+//   }
+// }
+
+// attackMonster() {
+//   const attackDamage = this.character.strength - this.monster.defense;
+//   this.monster.currentHealth -= attackDamage;
+//   if (this.monster.currentHealth <= 0) {
+//     this.character.experience += this.monster.experienceReward;
+//     this.character.money += this.monster.moneyReward;
+//     return "You have defeated the monster.";
+//   } else {
+//     return "The monster has " + this.monster.currentHealth + " health remaining.";
+//   }
 // }
