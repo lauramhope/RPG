@@ -36,9 +36,6 @@ export class Monster {
 }
 
 
-
-
-
 export class Battle {
   constructor(character, monster) {
     this.character = character;
@@ -56,9 +53,13 @@ export class Battle {
       return "The monster has " + this.monster.currentHealth + " health remaining.";
     }
   }
-    
-
 }
+// export class Gameplay {
+//   constructor(stepAmount, map, triggerTreasure, triggerMonster, )
+// } 
+
+
+// newArea, finishGame
 
 // {strength:10, defense:10, currentHealth:10, experience:0, money:0};
 // {strength:2, defense:2, maxHealth:2, currentHealth:2, experience: 100, money:100}
