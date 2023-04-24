@@ -1,6 +1,6 @@
 # _RPG_
 
-#### _{Brief description of application}_
+#### _Unfinished application - WIP_
 
 #### By **Laura Hope, Joe Wilfong, Ross Davila**
 
